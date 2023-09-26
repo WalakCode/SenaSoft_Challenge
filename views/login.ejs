@@ -7,17 +7,33 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <form action="/" method="post">
-        <p class="textUser">Correo</p>
-        <input class="inputRegister" type="text" name="email">
-        <p class="textUser">Contraseña</p>
-        <input class="inputRegister" type="password" name="pass">
-        <button class="buttonRegister">Registrate</button>
-        <div class="errorSystem">
-            <% if (error) { %>
-                <p><%= error %></p>
-              <% } %>
+    
+    
+    <div class="containerlogin">
+        <p class="titleLogin" >Logeate</p> 
+        <div class="loginLink">
+            <p class="textRegister">aun no tienes una cuenta? </p><a class="linkRegister" href="/" id="">Registrate</a>
         </div>
-    </form>
+    </div>
+    </div>
+    <div class="containerBodyLogin">
+        <div class="containerLogin">
+            <div class="centerLogin">
+                <form action="/login" method="post">
+                    <p class="loginUser">Correo</p>
+                    <input class="inputLogin" type="text" name="email">
+                    <p class="loginUser">Contraseña</p>
+                    <input class="inputLogin" type="password" name="pass">
+                    <button class="buttonLogin">Registrate</button>
+                    <div class="errorSystem">
+                        <% if (error) { %>
+                            <p><%= error %></p>
+                        <% } %>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+        
 </body>
 </html>
