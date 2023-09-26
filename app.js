@@ -1,11 +1,31 @@
 const express = require('express');
 const app = express();
-// const dbconnection = require('./config/dbC');
-// const userController = require('./controllers/userController');
+const db = require('./config/db');
+const userController = require('./controllers/userController')
 const bodyParser = require('body-parser');
+const { error } = require('console');
+const { createServer } = require('node:http');
+const server = createServer(app);
+const session = require('express-session'); 
+
+app.use(session({
+    secret:'NFAUOFPI02MC0',
+    resave: false,
+    saveUninitialized: true,
+    cookie:{
+      secure:false,
+      maxAge: 30 * 60 * 100,
+    },  
+}));
 
 
-app.listen(3000)
+db.connect((err) => {
+    if (err) {
+      console.error('Error al conectar a la base de datos:', err);
+    } else{
+        server.listen(3000)
+    }
+});
 
 app.disable('x-powered-by');
 
@@ -16,10 +36,38 @@ app.use(express.static('public'))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get('/', (req, res) => {
+    let error = req.session.error;
+    req.session.destroy() 
+    res.render('index',{ error });
+  })
 
+app.post('/', (req, res) => {
 
-app.get('/',(req,res)=>{
-    res.render('index')
+    const email = req.body.email; 
+    const password = req.body.pass;
+    
+    userController.verifyUser(email,password,(err,error)=>{
+     if(err){
+      console.error('error al verificarla',err);
+     }
+     else if(error){
+        req.session.error = error
+        res.redirect('/')
+     }else{
+      console.log('to fue bien')
+      
+      userController.registerUser(email, password, (err) => {
+        if (err) {
+          console.error('Error al insertar usuario:', err);
+          res.render('error');
+        } else {
+            req.session.user = email;
+            res.render('room')
+        }
+      });
+     }
+    })
 })
 app.get('/login',(req,res)=>{
     res.render('login')

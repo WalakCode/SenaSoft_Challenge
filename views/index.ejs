@@ -25,7 +25,9 @@
                     <input class="inputRegister" type="password" name="pass">
                     <button class="buttonRegister">Registrate</button>
                     <div class="errorSystem">
-                        
+                        <% if (error) { %>
+                            <p><%= error %></p>
+                          <% } %>
                     </div>
                 </form>
             </div>
