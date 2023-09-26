@@ -4,14 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>prueba</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
-<body>
-    <form action="/" method="post">
-        <h1>Registrate</h1>
-        <h1>usuario</h1><input type="text" name="user">
-        <h1>contraseña</h1><input type="password" name="pass">
-        <button>Registrate</button>
-    </form>
+<body class="body">
+    <div class="containerRegister">
+        <p class="titleRegister" >Registrate</p> 
+        <div class="containerLink">
+            <p class="textLogin">ya tienes una cuenta? </p><a class="linkLogin" href="#" id="">Inicia sesion</a>
+        </div>
+    </div>
+    
+    <div class="containerBodyRegister">
+        <div class="containerLogin">
+            <div class="centerLogin">
+                <form action="/" method="post">
+                    <p class="textUser">Usuario</p>
+                    <input class="inputLogin" type="text" name="user">
+                    <p class="textUser">Contraseña</p>
+                    <input class="inputLogin" type="password" name="pass">
+                    <button class="buttonLogin">Registrate</button>
+                    <div class="errorSystem">
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+   
 </body>
 </html>
 
