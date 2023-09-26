@@ -55,8 +55,7 @@ app.post('/', (req, res) => {
         req.session.error = error
         res.redirect('/')
      }else{
-      console.log('to fue bien')
-      
+
       userController.registerUser(email, password, (err) => {
         if (err) {
           console.error('Error al insertar usuario:', err);
@@ -69,9 +68,45 @@ app.post('/', (req, res) => {
      }
     })
 })
+
 app.get('/login',(req,res)=>{
-    res.render('login')
-})
+    let error = req.session.dato;
+    req.session.destroy() 
+    res.render('login',{error});
+  })
+  
+  //logearse
+  app.get('/room',(req,res)=>{
+      if(req.session.user){
+        let user = req.session.user
+        let error = req.session.dato2
+        res.render('room',{ user , error })
+      }else{
+        res.redirect('login');
+      }
+     
+    }),
+  
+  app.post('/login',(req,res)=>{
+    const email = req.body.email; 
+    const password = req.body.pass;
+    userController.sessionStart(email,password,(err,auth,error)=>{
+    if (err) {
+      res.status(500).send('error en la consulta de login')
+    } else{
+      if(auth){
+        req.session.user = email;
+        req.session.dato2 = "";
+        res.redirect('room');  
+      }else{
+        req.session.dato = error
+        res.redirect('login')
+      }
+    }
+  })
+  })
+
+
 
 
 

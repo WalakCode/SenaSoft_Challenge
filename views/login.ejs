@@ -7,14 +7,18 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <form action="/" method="post">
+    <form action="/login" method="post">
         <p >Usuario</p>
-        <input  type="text" name="user">
+        <input  type="text" name="email">
         <p >Contraseña</p>
         <input type="password" name="pass">
         <button >ingresar</button>
         <div class="errorSystem">
-            
+            <% if (error) { %>
+                <p><%= error %>!</p>
+              <% } else { %>
+                
+              <% } %>
         </div>
     </form>
 </body>

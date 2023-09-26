@@ -38,7 +38,7 @@ const userController = {
 
 
     sessionStart: (email, password, callback) => {
-        model.verifyUser(email,password,(err, results) => {
+        model.verifyUser(email,(err, results) => {
           if (err) {
             console.error('Error en la consulta de usuario por nombre:', err);
             return callback(err,null);
@@ -50,7 +50,7 @@ const userController = {
           const userFound = results[0];
           const passStorage = userFound.contraseña;
 
-          if (passStorage === contraseña) {
+          if (passStorage === password) {
             return callback(null, true); 
           } else {
             let error = "no coincide contraseñas";

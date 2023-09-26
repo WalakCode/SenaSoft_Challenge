@@ -11,16 +11,16 @@ const userModel = {
             return callback(null)
         })
     },
-    verifyUser:(user,callback)=>{
-        const query = "SELECT correo FROM usuarios WHERE correo = ?";
-        db.query(query,user,(err,results)=>{
+    verifyUser:(email,callback)=>{
+        const query = 'SELECT * FROM usuarios WHERE correo = ?';
+        db.query(query,email,(err,results)=>{
             if(err){
+                console.log(err)
                 return callback(err,null)
             }
-            return callback(null,results)
+            return callback(null,results);
         })
-
     }
-}
+ }
 
 module.exports = userModel;
