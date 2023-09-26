@@ -97,4 +97,99 @@ body {
   transition: 0.4s;
 }
 
+.containerlogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-family: "Times New Roman", Times, serif;
+  height: 80px;
+  justify-content: space-between;
+  margin: 0px 30px 0px 30px;
+}
+.containerlogin .titleLogin {
+  font-size: 25px;
+  font-weight: bold;
+}
+.containerlogin .loginLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.containerlogin .loginLink .textRegister {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+.containerlogin .loginLink .linkRegister {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 20px;
+}
+.containerlogin .loginLink .linkRegister:hover {
+  text-decoration: underline;
+  opacity: 0.5;
+}
+
+.containerBodyLogin {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.containerBodyLogin .containerLogin {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  background-color: rgb(26, 32, 39);
+  border-radius: 10px;
+  width: 420px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.containerBodyLogin .centerLogin {
+  margin-left: auto;
+  margin-right: auto;
+  width: 260px;
+}
+.containerBodyLogin .loginUser {
+  margin: 20px 0px 20px 0px;
+}
+.containerBodyLogin .inputLogin {
+  background-color: rgb(7, 10, 14);
+  border: 0px;
+  color: white;
+  border-radius: 5px;
+  font-family: "Times New Roman", Times, serif;
+  width: 260px;
+  height: 25px;
+}
+.containerBodyLogin .buttonLogin {
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: rgb(35, 134, 54);
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border: 0px;
+  margin-top: 20px;
+  width: 267px;
+  height: 35px;
+}
+.containerBodyLogin .errorSystem {
+  margin-left: auto;
+  margin-right: auto;
+  width: 265px;
+  text-align: center;
+}
+.containerBodyLogin .buttonLogin:hover {
+  transform: scale(1.01);
+  transition: 0.2s;
+}
+.containerBodyLogin .buttonLogin:not(:hover) {
+  transform: scale(1);
+  transition: 0.4s;
+}
+
 /*# sourceMappingURL=style.css.map */
