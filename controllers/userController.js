@@ -1,6 +1,5 @@
-const model = require('../models/userModel');//pidiendo el modelo de usuario
+const model = require('../models/userModel');
 
-//controlador de usuario
 const userController = {
   
     registerUser:(email,password,callback) =>{
@@ -61,5 +60,5 @@ const userController = {
   
 }
 
-//exporta el modulo
+
 module.exports = userController;
