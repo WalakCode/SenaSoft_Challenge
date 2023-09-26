@@ -8,9 +8,12 @@
 <body>
     <form action="/" method="post">
         <h1>Registrate</h1>
-        <h1>usuario</h1><input type="text" name="user">
+        <h1>correo</h1><input type="text" name="email">
         <h1>contraseña</h1><input type="password" name="pass">
         <button>Registrate</button>
+        <% if (error) { %>
+            <p><%= error %></p>
+          <% } %>
     </form>
 </body>
 </html>
