@@ -24,7 +24,7 @@ const userController = {
             return(callback(err,null))
           }
           if(results.length !== 0){
-            let error = 'usuario ya existe en la base de datos'
+            let error = 'correo ya existe en la base de datos'
             return callback(null,error)
           }else{
             return callback(null,null)

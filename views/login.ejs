@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <form action="/" method="post">
+    <form action="/login" method="post">
         <p class="textUser">Correo</p>
         <input class="inputRegister" type="text" name="email">
         <p class="textUser">Contraseña</p>
         <input class="inputRegister" type="password" name="pass">
-        <button class="buttonRegister">Registrate</button>
+        <button class="buttonRegister">Logeate</button>
         <div class="errorSystem">
             <% if (error) { %>
                 <p><%= error %></p>
