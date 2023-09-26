@@ -1,4 +1,4 @@
-.body {
+body {
   background-color: rgb(7, 10, 14);
 }
 
@@ -43,10 +43,10 @@
   align-items: center;
   justify-content: center;
 }
-.containerBodyRegister .containerLogin {
+.containerBodyRegister .containerRegister {
   color: rgb(255, 255, 255);
   font-size: 25px;
-  background-color: rgb(19, 22, 26);
+  background-color: rgb(26, 32, 39);
   border-radius: 10px;
   width: 420px;
   height: 400px;
@@ -54,7 +54,7 @@
   align-items: center;
   justify-content: center;
 }
-.containerBodyRegister .centerLogin {
+.containerBodyRegister .centerRegister {
   margin-left: auto;
   margin-right: auto;
   width: 260px;
@@ -62,7 +62,7 @@
 .containerBodyRegister .textUser {
   margin: 20px 0px 20px 0px;
 }
-.containerBodyRegister .inputLogin {
+.containerBodyRegister .inputRegister {
   background-color: rgb(7, 10, 14);
   border: 0px;
   color: white;
@@ -71,7 +71,7 @@
   width: 260px;
   height: 25px;
 }
-.containerBodyRegister .buttonLogin {
+.containerBodyRegister .buttonRegister {
   font-weight: bold;
   border-radius: 5px;
   background-color: rgb(35, 134, 54);
@@ -88,11 +88,11 @@
   width: 265px;
   text-align: center;
 }
-.containerBodyRegister .buttonLogin:hover {
+.containerBodyRegister .buttonRegister:hover {
   transform: scale(1.01);
   transition: 0.2s;
 }
-.containerBodyRegister .buttonLogin:not(:hover) {
+.containerBodyRegister .buttonRegister:not(:hover) {
   transform: scale(1);
   transition: 0.4s;
 }

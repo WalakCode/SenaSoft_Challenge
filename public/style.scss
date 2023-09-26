@@ -1,9 +1,10 @@
 @use 'moduls'; 
 
-// header
-.body{
+body{
     background-color: moduls.$backgroundColor; 
 }
+
+// register header
 .containerRegister{
     @include moduls.centraTexto();
     color: white;
@@ -40,7 +41,7 @@
 }
 
 
-// body
+// register body
 
 .containerBodyRegister{
     height: 500px;
@@ -48,13 +49,13 @@
     align-items: center;
     justify-content: center;
 
-    .containerLogin{
+    .containerRegister{
         @include moduls.container();
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .centerLogin{
+    .centerRegister{
         margin-left: auto;
         margin-right: auto;
         width: 260px;
@@ -62,13 +63,13 @@
     .textUser{
         margin: 20px 0px 20px 0px;
     }
-    .inputLogin{
+    .inputRegister{
         @include moduls.inputs();
         width: 260px;
         height: 25px;
         
     }
-    .buttonLogin{
+    .buttonRegister{
         @include moduls.boton();
         border: 0px;
         margin-top: 20px;
@@ -81,12 +82,14 @@
         width: 265px;
         text-align: center;
     }
-    .buttonLogin:hover{
+    .buttonRegister:hover{
         transform: scale(1.01);
         transition: 0.2s;
     }
-    .buttonLogin:not(:hover){
+    .buttonRegister:not(:hover){
         transform: scale(1);
         transition: 0.4s;
     }
 }
+
+// --------------------------login ---------
