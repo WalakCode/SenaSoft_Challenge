@@ -1,17 +1,12 @@
 $backgroundColor: rgb(7, 10, 14); 
-$colorLetter: rgb(0, 207, 200);
+$colorLetter: rgb(255, 255, 255);
 $backgroundButton: rgb(35, 134, 54);
 $backgroundForm: rgb(26, 32, 39);
 
 
-@mixin centraTexto(){
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 @mixin container(){
-    color: rgb(255, 255, 255);
+    color: white;
     font-size: 25px;
     background-color: $backgroundForm;
     border-radius: 10px;

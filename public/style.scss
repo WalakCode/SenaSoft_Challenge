@@ -6,8 +6,10 @@ body{
 
 // register header
 .containerRegister{
-    @include moduls.centraTexto();
-    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: moduls.$colorLetter;
     font-family: 'Times New Roman', Times, serif;
     height: 80px;
     justify-content: space-between;
@@ -19,16 +21,18 @@ body{
     }
 
     .containerLink{
-        @include moduls.centraTexto();
+        display: flex;
+        align-items: center;
+        justify-content: center;
     
     .textLogin{
-        color: white;
+        color: moduls.$colorLetter;
         font-size: 18px;
         margin-top: 20px;
         margin-right: 10px;
     }
     .linkLogin{
-        color: white;
+        color: moduls.$colorLetter;
         text-decoration: none;
         font-size: 20px;
         
