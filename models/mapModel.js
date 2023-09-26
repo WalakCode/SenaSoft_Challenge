@@ -1,4 +1,3 @@
-const { callbackify } = require('util');
 const db = require('../config/db');
 
 
@@ -23,18 +22,33 @@ const userModel = {
         })
         
     },
-
-    viewNodes:()=>{
-        const query = "SELECT * FROM ubicaciones WHERE"
-        db.query(query,jsonObject,(err,results)=>{
+    
+    viewNodes:(nombre,callback)=>{
+        const query = "SELECT * FROM ubicaciones WHERE nombre = ?";
+        db.query(query,nombre,(err,results)=>{
             if(err){
-                return callback(err)
+                return callback(err,null)
             }
-            else if(results){
-                return callback(results)
+            if(results){
+                return callback(null,results)
             }
         })
              
-    }
+    },
+
+    viewConexion:(ubicaciones,callback)=>{
+        const ubicacion1 = ubicaciones.ubicacion1
+        const ubicacion2 = ubicaciones.ubicacion2
+        const query = "SELECT * FROM conexiones WHERE ubicacion1 = ? AND ubicacion2 = ?";
+        db.query(query,[ubicacion1,ubicacion2],(err,results)=>{
+            if(err){
+                console.log(err)
+                return callback(err,null)
+            }
+            if(results){
+                return callback(null,results)
+            }
+        })
+    },
 }
 module.exports = userModel;
