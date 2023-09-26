@@ -15,6 +15,7 @@ $backgroundForm: rgb(26, 32, 39);
 }
 @mixin inputs(){
     background-color: $backgroundColor;
+    font-size: 17px;
     border: 0px;
     color: white;
     border-radius: 5px;

@@ -4,7 +4,6 @@ body{
     background-color: moduls.$backgroundColor; 
 }
 
-// register header
 .containerRegister{
     display: flex;
     align-items: center;
@@ -45,7 +44,6 @@ body{
 }
 
 
-// register body
 
 .containerBodyRegister{
     height: 500px;
@@ -95,7 +93,6 @@ body{
     }
 }
 
-// login------------------header
 .containerlogin{
     display: flex;
     align-items: center;
@@ -136,7 +133,6 @@ body{
 }
 
 
-// login-------------------- body
 
 .containerBodyLogin{
     height: 500px;
@@ -187,7 +183,6 @@ body{
     }
 }
 
-// -------mensaje error
 
 
 .containerError{
@@ -196,7 +191,7 @@ body{
     justify-content: center;
     height: 97vh;
     color: white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto', sans-serif;;
     
     .mensajeError{
         text-align: center;
@@ -208,7 +203,6 @@ body{
     .containerImgErr{
         margin-left: 1.3cm ;
         display: flex;
-        // background-color: red;      
         align-items: center;
         justify-content: center;
         width: 550px;
@@ -230,7 +224,14 @@ body{
         border: 0px;
         width: 267px;
         height: 35px;
+        
+    }
+        
+    .linkErr{
+        text-decoration: none;
         font-weight: bold;
+        color: white;
+        font-size: 15px;
     }
     .buttonErr:hover{
         transform: scale(1.01);
