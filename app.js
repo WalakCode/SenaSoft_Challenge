@@ -133,7 +133,12 @@ app.post('/room', upload.single('archivoJson'), (req, res) => {
     const jsonString = jsonBuffer.toString('utf8'); // Convierte el buffer a una cadena UTF-8
     const jsonObject = JSON.parse(jsonString); // Convierte la cadena JSON a un objeto JavaScript
 
-    mapController.addNodeJson(jsonObject);
+    mapController.addNodeJson(jsonObject,(err)=>{
+        if(err){
+            console.log("err")
+        }
+    });
+
 
 })
 

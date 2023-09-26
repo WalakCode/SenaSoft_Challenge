@@ -1,3 +1,4 @@
+const { json } = require('body-parser');
 const model = require('../models/mapModel');
 
 const mapController={
@@ -10,6 +11,17 @@ const mapController={
             }
            })
 
+        });
+    },
+
+    addConexionJson:(jsonObject,callback)=>{
+        const conexiones = jsonObject.conexiones
+        conexiones.forEach(i => {
+            model.addConexionJson(i,(err)=>{
+                if(err){
+                    return callback(err)
+                }
+            })
         });
     }
 }

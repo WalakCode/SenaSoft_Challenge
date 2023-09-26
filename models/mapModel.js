@@ -12,6 +12,7 @@ const userModel = {
             }
         })
     },
+    
 
     addConexionJson:(jsonObject)=>{
         const query = "INSERT INTO conexiones SET ?"
@@ -20,8 +21,20 @@ const userModel = {
                 return callback(err);
             }
         })
+        
+    },
+
+    viewNodes:()=>{
+        const query = "SELECT * FROM ubicaciones WHERE"
+        db.query(query,jsonObject,(err,results)=>{
+            if(err){
+                return callback(err)
+            }
+            else if(results){
+                return callback(results)
+            }
+        })
+             
     }
-
 }
-
 module.exports = userModel;
