@@ -136,30 +136,19 @@ app.get('/login',(req,res)=>{
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
-app.post('/room', upload.single('archivoJson'), (req, res) => {
-  
+app.post('/room', upload.single('archivoJson'), async (req, res) => {
     const jsonBuffer = req.file.buffer; // Obtén el contenido del archivo como un buffer
     const jsonString = jsonBuffer.toString('utf8'); // Convierte el buffer a una cadena UTF-8
-    const jsonObject = JSON.parse(jsonString); // Convierte la cadena JSON a un objeto JavaScript
+    const jsonObject = JSON.parse(jsonString); // Convierte la cadena JSON a un objeto JavaScrip
 
-    mapController.addNodeJson(jsonObject,(error)=>{
-      if(error){
-        res.render('room', { error })
-      }
-      if(error == undefined){
-        res.redirect('/room')
-      }
-    })
-    mapController.addConexionJson(jsonObject,(error)=>{
-      if(error){
-        res.render('room', { error })
-      }
-      if(error == undefined){
-        res.redirect('/room')
-      }
-    })
+    mapController.addNodeJson(jsonObject,(error)=>{})
+    mapController.jsonConnectDirect(jsonObject,(error)=>{})
+
+    let error = ""
+    res.render('room',{error})
     
-})
+});
+
 
 app.post('/dataN', (req, res) => {
    
@@ -216,8 +205,8 @@ app.post('/dataN', (req, res) => {
 
 
 app.post('/carte',(req,res)=>{
-  cartController.setData((data1)=>{
-    console.log(data1,"holaaa")
+  cartController.setLocationData((data)=>{
+    res.render('carte',{ data })
   })
 })
 

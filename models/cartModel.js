@@ -13,9 +13,9 @@ const cartModel = {
             }
         })
     },
-    
+
     getConnection:(callback)=>{
-        const query = "SELECT * FROM conexiones"
+        const query = "SELECT ubicacion1,ubicacion2,peso FROM conexiones"
         db.query(query,(err,results)=>{
             if(err){
                 return callback(err,null)
