@@ -1,5 +1,6 @@
 const model = require('../models/userModel');
 
+
 const userController = {
   
     registerUser:(email,password,callback) =>{

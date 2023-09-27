@@ -132,14 +132,47 @@ app.post('/room', upload.single('archivoJson'), (req, res) => {
     const jsonString = jsonBuffer.toString('utf8'); // Convierte el buffer a una cadena UTF-8
     const jsonObject = JSON.parse(jsonString); // Convierte la cadena JSON a un objeto JavaScript
 
-    mapController.addNodeJson(jsonObject,(err)=>{
-        if(err){
-            console.log("err")
-        }
-    });
+    mapController.addNodeJson(jsonObject);
+    mapController.addConexionJson(jsonObject)
 
 
 })
+
+app.post('/dataN', (req, res) => {
+   
+    const nombre = req.body.nombre
+    const posX = req.body.posX
+    const posY = req.body.posY
+     
+    const nodoObject ={
+        ubicaciones:[
+            {
+                nombre:nombre,
+                posX:posX,
+                posY:posY,
+            }
+        ]
+    }
+    mapController.addNodeJson(nodoObject);
+  });
+
+  app.post('/dataC', (req, res) => {
+   
+    const ubicacion1 = req.body.priUb
+    const ubicacion2 = req.body.secUb
+    const peso = req.body.peso
+     
+    const conexionObject ={
+        conexiones:[
+            {
+                ubicacion1:ubicacion1,
+                ubicacion2:ubicacion2,
+                peso:peso,
+            }
+        ]
+    }
+    mapController.addConexionJson(conexionObject);
+  });
 
 app.use((req, res) => {
     res.render('notfound');
