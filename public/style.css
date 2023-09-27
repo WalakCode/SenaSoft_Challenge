@@ -99,10 +99,6 @@ body {
   transition: 0.4s;
 }
 
-.err {
-  margin: 0px 0px 5px 0px;
-}
-
 .containerlogin {
   display: flex;
   align-items: center;
@@ -197,6 +193,11 @@ body {
 .containerBodyLogin .buttonLogin:not(:hover) {
   transform: scale(1);
   transition: 0.4s;
+}
+
+.err {
+  margin: 0px 0px 5px 0px;
+  width: 300px;
 }
 
 .containerError {
@@ -311,7 +312,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 65vh;
+  height: 61.8vh;
 }
 .containerBodyRoom .containerRoom {
   border: solid rgb(45, 41, 41) 1px;
@@ -438,6 +439,60 @@ body {
 .containerBodyRoom .escribirConexion .buttonConexion:not(:hover) {
   transform: scale(1);
   transition: 0.4s;
+}
+
+.containerBodycarte {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.containerBodycarte hr {
+  width: 70%;
+}
+.containerBodycarte .containerNodosConexion {
+  display: flex;
+}
+.containerBodycarte .containerNodos {
+  border-radius: 10px;
+  background-color: rgb(27, 28, 28);
+  width: 300px;
+  margin: 10px;
+}
+.containerBodycarte .containerNodos .flexNodo {
+  display: flex;
+  flex-wrap: wrap;
+}
+.containerBodycarte .containerNodos .posicionesNodo p {
+  margin: 15;
+  font-size: 18px;
+}
+.containerBodycarte .containerNodos .titleNodo {
+  font-size: 33px;
+  font-weight: bold;
+}
+.containerBodycarte .containerNodos .nombreNodo {
+  color: rgb(223, 211, 211);
+  font-size: 28px;
+  font-weight: bold;
+  margin-right: 20px;
+  margin-left: 30px;
+}
+.containerBodycarte .containerConexion {
+  background-color: rgb(27, 28, 28);
+  border-radius: 10px;
+  margin: 10px;
+  width: 300px;
+}
+.containerBodycarte .containerConexion .titleConexion {
+  font-size: 33px;
+  margin-bottom: 44.5px;
+  font-weight: bold;
+}
+.containerBodycarte .containerConexion .ubicacionPeso p {
+  margin: 15px 15px 15px 15px;
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=style.css.map */
