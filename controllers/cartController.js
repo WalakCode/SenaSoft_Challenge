@@ -1,3 +1,4 @@
+const cache = require("../cache/cache");
 const model = require("../models/cartModel");
 
 const cartController = {
@@ -44,18 +45,61 @@ const cartController = {
     
     class graph {
       constructor() {
-        this.nodos = new Set();
-        this.aristas = new Map();
+        this.nodos = new Map();
       }
       agregarNodo(nodo) {
-        this.nodo.add(nodo);
-        this.aristas.set(nodo, []);
+        if (!this.nodos.has(nodo)){
+            this.nodos.set(nodo,[]);
+        }
       }
       agregarArista(nodo1, nodo2, peso) {
-        this.aristas.get(nodo1).push({ nodo: nodo2, peso });
-        this.aristas.get(nodo2).push({ nodo: nodo1, peso }); // Para grafos no dirigidos
+        if(this.nodos.has(nodo1)&&this.nodos.has(nodo2)){
+            this.nodos.get(nodo1).push({nodo2,peso});
+            this.nodos.get(nodo2).push({nodo2:nodo1, peso});
+        } 
       }
       
+       imprimirGrafo() {
+        for (let [nodo, adyacentes] of this.nodos) {
+          const adyacentesStr = adyacentes.map(adyacente => `${adyacente.nodo2} (peso: ${adyacente.peso})`).join(", ");
+          console.log(`${nodo} -> ${adyacentesStr}`);
+        }
+      }
+
+      encontrarRutaMasCortaDesde(nodoInicio) {
+        const distancias = {};
+        const anterior = {};
+        const nodosNoVisitados = new Set([...this.nodos.keys()]);
+
+        for (const nodo of nodosNoVisitados) {
+          distancias[nodo] = Infinity;
+          anterior[nodo] = null;
+        }
+
+        distancias[nodoInicio] = 0;
+
+        while (nodosNoVisitados.size > 0) {
+          const nodoActual = Array.from(nodosNoVisitados).reduce((minNodo, nodo) => {
+            return distancias[nodo] < distancias[minNodo] ? nodo : minNodo;
+          });
+
+          nodosNoVisitados.delete(nodoActual);
+
+          for (const vecinoData of this.nodos.get(nodoActual) || []) {
+            const vecino = vecinoData.nodo2;
+            const peso = vecinoData.peso;
+            const distanciaTentativa = distancias[nodoActual] + peso;
+
+            if (distanciaTentativa < distancias[vecino]) {
+              distancias[vecino] = distanciaTentativa;
+              anterior[vecino] = nodoActual;
+            }
+          }
+        }
+
+        return { distancias, anterior };
+      }
+
     }
 
     const grafo = new graph();
@@ -68,7 +112,34 @@ const cartController = {
         grafo.agregarArista(i.ubicacion1,i.ubicacion2,i.peso)
     });
     
+    grafo.imprimirGrafo()
+
+    const nodoInicio = cache.cacheStartPoint(); // Cambia esto al nodo deseado como punto de inicio
+    const resultado = grafo.encontrarRutaMasCortaDesde(nodoInicio);
+    console.log(`Rutas más cortas desde ${nodoInicio}:`);
+    for (const nodo in resultado.distancias) {
+      if (resultado.distancias.hasOwnProperty(nodo)) {
+        if(resultado.distancias[nodo] == Infinity){
+            console.log(`${nodo} -> Distancia: inalcanzable`);
+        }
+        else{
+            console.log(`${nodo} -> Distancia: ${resultado.distancias[nodo]}, Ruta: ${obtenerRuta(resultado.anterior, nodo)}`);
+        }
+        
+      }
+    }
+    
   },
 };
+
+
+function obtenerRuta(anterior, nodo) {
+    const ruta = [];
+    while (nodo !== null) {
+      ruta.unshift(nodo);
+      nodo = anterior[nodo];
+    }
+    return ruta.join(' -> ');
+  }
 
 module.exports = cartController;

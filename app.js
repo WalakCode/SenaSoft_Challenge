@@ -9,6 +9,7 @@ const { createServer } = require('node:http');
 const server = createServer(app);
 const session = require('express-session'); 
 const cartController = require('./controllers/cartController')
+const cache = require('./cache/cache')
 
 
 
@@ -49,13 +50,6 @@ app.get('/', (req, res) => {
     res.render('index',{ error });
   })
 
-// --------------------verificacion-----------
-
-
-
-
-
-// --------------------verificacion-----------
 
 app.post('/', (req, res) => {
 
@@ -137,10 +131,11 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
 app.post('/room', upload.single('archivoJson'), async (req, res) => {
-    const jsonBuffer = req.file.buffer; // Obtén el contenido del archivo como un buffer
-    const jsonString = jsonBuffer.toString('utf8'); // Convierte el buffer a una cadena UTF-8
-    const jsonObject = JSON.parse(jsonString); // Convierte la cadena JSON a un objeto JavaScrip
+    const jsonBuffer = req.file.buffer; 
+    const jsonString = jsonBuffer.toString('utf8'); 
+    const jsonObject = JSON.parse(jsonString); 
 
+    mapController.cacheStartPoint(jsonObject)
     mapController.addNodeJson(jsonObject,(error)=>{})
     mapController.jsonConnectDirect(jsonObject,(error)=>{})
 
@@ -217,8 +212,10 @@ app.post('/dj',(req,res)=>{
   cartController.setLocationData((data)=>{
     cartController.setConecctionData((data2)=>{
       cartController.graph(data,data2)
-      console.log(data,data2)
     })
+    const inicio = req.body.inicio
+    const inicioObj = {inicio:inicio}
+    mapController.cacheStartPoint(inicioObj)
   })
 })
 

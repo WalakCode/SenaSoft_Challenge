@@ -1,4 +1,5 @@
 // Requiere el módulo 'mapModel' ubicado en el directorio '../models'
+const cache = require("../cache/cache");
 const model = require("../models/mapModel");
 
 // Define un objeto 'mapController' para agrupar funciones relacionadas con el controlador de mapas
@@ -141,6 +142,11 @@ const mapController = {
       });
     });
   },
+
+  cacheStartPoint:(jsonObject)=>{
+    const inicio = jsonObject.inicio
+    cache.cacheStartPoint(inicio)
+  }
 };
 
 // Exporta el objecto 'mapController'
