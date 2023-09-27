@@ -37,6 +37,7 @@ const mapController = {
               }
             }
           });
+          return callback()
         }else{
             let error = "ya existe el nodo"
             return callback(error)
@@ -79,6 +80,7 @@ const mapController = {
                     }
                 }
             })
+            return callback()
           }else{
             let error = "ya existe la conexion"
             return callback(error)

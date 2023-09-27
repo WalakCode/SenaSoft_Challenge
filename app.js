@@ -8,6 +8,7 @@ const multer = require('multer');
 const { createServer } = require('node:http');
 const server = createServer(app);
 const session = require('express-session'); 
+const cartController = require('./controllers/cartController')
 
 app.use(session({
     secret:'NFAUOFPI02MC0',
@@ -122,7 +123,6 @@ app.get('/login',(req,res)=>{
 
 
 
-
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
@@ -136,13 +136,19 @@ app.post('/room', upload.single('archivoJson'), (req, res) => {
       if(error){
         res.render('room', { error })
       }
+      if(error == undefined){
+        res.redirect('/room')
+      }
     })
     mapController.addConexionJson(jsonObject,(error)=>{
       if(error){
         res.render('room', { error })
       }
+      if(error == undefined){
+        res.redirect('/room')
+      }
     })
-    res.redirect('/room')
+    
 })
 
 app.post('/dataN', (req, res) => {
@@ -164,8 +170,11 @@ app.post('/dataN', (req, res) => {
       if(error){
         res.render('room', { error })
       }
+      if(error == undefined){
+        res.redirect('/room')
+      }
   });
-  res.redirect('/room')
+  
 })
   app.post('/dataC', (req, res) => {
    
@@ -183,16 +192,23 @@ app.post('/dataN', (req, res) => {
         ]
     }
     mapController.addConexionJson(conexionObject,(error)=>{
+      console.log(error)
       if(error){
         res.render('room', { error })
       }
+      console.log(error,"UND")
+      if(error == undefined){
+        res.redirect('/room')
+      }
     })
-    res.redirect('/room')
+   
 });
 
 
 app.post('/carte',(req,res)=>{
-  res.render('carte')
+  cartController.setData((data1)=>{
+    console.log(data1,"holaaa")
+  })
 })
 
 
