@@ -14,10 +14,10 @@ app.use(session({
     secret:'NFAUOFPI02MC0',
     resave: false,
     saveUninitialized: true,
-    cookie:{
-      secure:false,
-      maxAge: 30 * 60 * 100,
-    },  
+    // cookie:{
+    //   secure:false,
+    //   maxAge: 30 * 60 * 100,
+    // },  
 }));
 
 db.connect((err) => {
@@ -26,7 +26,7 @@ db.connect((err) => {
     } else{
         server.listen(3000)
     }
-});
+}); 
 
 
 app.disable('x-powered-by');
