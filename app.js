@@ -132,10 +132,17 @@ app.post('/room', upload.single('archivoJson'), (req, res) => {
     const jsonString = jsonBuffer.toString('utf8'); // Convierte el buffer a una cadena UTF-8
     const jsonObject = JSON.parse(jsonString); // Convierte la cadena JSON a un objeto JavaScript
 
-    mapController.addNodeJson(jsonObject);
-    mapController.addConexionJson(jsonObject)
-
-
+    mapController.addNodeJson(jsonObject,(error)=>{
+      if(error){
+        res.render('room', { error })
+      }
+    })
+    mapController.addConexionJson(jsonObject,(error)=>{
+      if(error){
+        res.render('room', { error })
+      }
+    })
+    res.redirect('/room')
 })
 
 app.post('/dataN', (req, res) => {
@@ -153,9 +160,13 @@ app.post('/dataN', (req, res) => {
             }
         ]
     }
-    mapController.addNodeJson(nodoObject);
+    mapController.addNodeJson(nodoObject,(error)=>{
+      if(error){
+        res.render('room', { error })
+      }
   });
-
+  res.redirect('/room')
+})
   app.post('/dataC', (req, res) => {
    
     const ubicacion1 = req.body.priUb
@@ -171,8 +182,19 @@ app.post('/dataN', (req, res) => {
             }
         ]
     }
-    mapController.addConexionJson(conexionObject);
-  });
+    mapController.addConexionJson(conexionObject,(error)=>{
+      if(error){
+        res.render('room', { error })
+      }
+    })
+    res.redirect('/room')
+});
+
+
+app.post('/carte',(req,res)=>{
+  res.render('carte')
+})
+
 
 app.use((req, res) => {
     res.render('notfound');

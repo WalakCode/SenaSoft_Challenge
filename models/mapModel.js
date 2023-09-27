@@ -1,7 +1,7 @@
 const db = require('../config/db');
 
 
-const userModel = {
+const mapModel = {
 
     addNodeJson:(jsonObject)=>{
         const query = "INSERT INTO ubicaciones SET ?"
@@ -50,5 +50,30 @@ const userModel = {
             }
         })
     },
+
+    viewPosicions:(callback)=>{
+        const query = "SELECT posX,posY FROM ubicaciones"
+        db.query(query,(err,results)=>{
+            if(err){
+                return callback(err,null)
+            }
+            if(results){
+                return callback(null,results)
+            }
+        })
+    },
+
+    viewAllNodes:(nombre,callback)=>{
+        const query = "SELECT nombre FROM ubicaciones ";
+        db.query(query,nombre,(err,results)=>{
+            if(err){
+                return callback(err,null)
+            }
+            if(results){
+                return callback(null,results)
+            }
+        })
+    }
+
 }
-module.exports = userModel;
+module.exports = mapModel;
