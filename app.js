@@ -197,7 +197,19 @@ app.post('/dataN', (req, res) => {
 
 app.post('/carte',(req,res)=>{
   cartController.setLocationData((data)=>{
-    res.render('carte',{ data })
+    cartController.setConecctionData((data2)=>{
+      res.render('carte',{ data,data2 })
+    })
+  })
+  
+})
+
+app.post('/dj',(req,res)=>{
+  cartController.setLocationData((data)=>{
+    cartController.setConecctionData((data2)=>{
+      cartController.graph(data,data2)
+      console.log(data,data2)
+    })
   })
 })
 
