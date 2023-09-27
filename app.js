@@ -8,17 +8,18 @@ const multer = require('multer');
 const { createServer } = require('node:http');
 const server = createServer(app);
 const session = require('express-session'); 
-const cartController = require('./controllers/cartController');
-const { error } = require('node:console');
+const cartController = require('./controllers/cartController')
+
+
 
 app.use(session({
     secret:'NFAUOFPI02MC0',
     resave: false,
     saveUninitialized: true,
-    // cookie:{
-    //   secure:false,
-    //   maxAge: 30 * 60 * 100,
-    // },  
+    cookie:{
+      secure:false,
+      maxAge: 30 * 60 * 100,
+    },  
 }));
 
 db.connect((err) => {
@@ -47,6 +48,14 @@ app.get('/', (req, res) => {
     req.session.destroy() 
     res.render('index',{ error });
   })
+
+// --------------------verificacion-----------
+
+
+
+
+
+// --------------------verificacion-----------
 
 app.post('/', (req, res) => {
 
