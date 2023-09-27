@@ -5,6 +5,7 @@ body{
     margin: 0; 
 }
 
+//index
 .containerRegister{
     display: flex;
     align-items: center;
@@ -43,8 +44,6 @@ body{
     }
     }
 }
-
-
 
 .containerBodyRegister{
     height: 500px;
@@ -93,9 +92,8 @@ body{
         transition: 0.4s;
     }
 }
-.err{
-    margin: 0px 0px 5px 0px;
-}
+
+//login
 .containerlogin{
     display: flex;
     align-items: center;
@@ -134,8 +132,6 @@ body{
     }
     }
 }
-
-
 
 .containerBodyLogin{
     height: 500px;
@@ -185,9 +181,12 @@ body{
         transition: 0.4s;
     }
 }
+.err{
+    margin: 0px 0px 5px 0px;
+    width: 300px;
+}
 
-
-
+//notfound
 .containerError{
     display: flex;
     align-items: center;
@@ -251,8 +250,7 @@ body{
     
 }
 
-
-// estilos subir archivo 
+//room
 .containerSiguiente{
     text-align: center;
     justify-content: center;
@@ -299,7 +297,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 65vh;
+    height: 61.8vh;
     .containerRoom{
         border: solid rgb(45, 41, 41) 1px;
         border-radius: 10px;
@@ -411,3 +409,68 @@ body{
     }
     
 }
+
+//carte
+.containerBodycarte{
+    hr{
+        width: 70%;
+    }
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+    .containerNodosConexion{
+        display: flex;
+    }
+
+    .containerNodos{
+        border-radius: 10px;
+        background-color: moduls.$backgroundForm;
+        width: 300px;
+        margin: 10px;
+        .flexNodo{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .posicionesNodo{
+            p{
+                margin: 15;
+                font-size: 18px;
+            }
+        }
+        .titleNodo{
+            font-size: 33px;
+            font-weight: bold;
+        }
+        .nombreNodo{
+            color: rgb(223, 211, 211);
+            font-size: 28px;
+            font-weight: bold;
+            margin-right: 20px;
+            margin-left: 30px;
+        }
+    }
+
+    .containerConexion{
+        background-color: moduls.$backgroundForm;
+        border-radius: 10px;
+        margin  : 10px;
+        width: 300px;
+        .titleConexion{
+            font-size: 33px;
+            margin-bottom: 44.5px;
+            font-weight: bold;
+        }
+        .ubicacionPeso{
+            p{
+                margin: 15px 15px 15px 15px;
+                font-size: 18px;
+            }
+        }
+    }
+
+}
+
+

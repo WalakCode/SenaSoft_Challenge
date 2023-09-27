@@ -4,24 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1>Nodos</h1>
-    <% data.forEach(function(obj) { %>
-        <h1>Nodo: <%= obj.nombre %></h1>
-        <h3>Posición X: <%= obj.posX %></h3>
-        <h3>Posición Y: <%= obj.posY %></h3>
-      <% }); %>      
+    <div class="containerBodycarte">
+      <div class="containerNodosConexion">
 
-      <h1>Conexiones</h1>
-      <% data2.forEach(function(obj) { %>
-        <h3>ubicacion #1: <%= obj.ubicacion1 %></h1>
-        <h3>ubicacion #2: <%= obj.ubicacion2 %></h3>
-        <h3>peso: <%= obj.peso %></h3   >
-      <% }); %>
-      
-      <form action="/dj" method="post">
-        <button>Mira ruta mas rapida</button>
-      </form>
+        <div class="containerNodos">
+          <p class="titleNodo">Nodos</p>
+          <div class="flexNodo">
+            <% data.forEach(function(obj) { %>
+              <p class="nombreNodo">Nodo: <%= obj.nombre %></p> 
+              <div class="posicionesNodo">
+                <p>Posición X: <%= obj.posX %></p> 
+                <p>Posición Y: <%= obj.posY %></p>
+              </div>
+              <% }); %>      
+          </div>
+        </div>
+
+        <div class="containerConexion">
+          <p class="titleConexion">Conexiones</p>
+          <% data2.forEach(function(obj) { %>
+            <div class="ubicacionPeso">
+              <p>ubicacion #1: <%= obj.ubicacion1 %></p>
+              <p>ubicacion #2: <%= obj.ubicacion2 %></p>
+              <p>peso: <%= obj.peso %></p>
+              <hr>
+            </div>
+          <% }); %>
+        </div>
+        
+      </div>
+    </div>
+    <form action="/dj" method="post">
+      <button>Mira ruta mas rapida</button>
+    </form>
 </body>
 </html>
