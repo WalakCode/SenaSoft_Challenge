@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <form action="/room" method="post" enctype="multipart/form-data">
@@ -21,13 +22,6 @@
         <p>escribelo</p>
         <h1>Conexion</h1><input type="text" name="priUb" id="" placeholder="Primera Ubicacion"> <input type="text" name="secUb" id="" placeholder="Segunda Ubicacion"> <input type="text" name="peso" id="" placeholder="Peso">
         <button>sube</button>
-    </form>
-
-    <% if (error) { %>
-        <p><%= error %></p>
-    <% } %>
-    <form action="/carte" method="post">
-    <h1>ya cargaste tus datos? dale click al boton para seguir</h1><button>sigue</button>
     </form>
 </body>
 </html>
