@@ -13,10 +13,10 @@ app.use(session({
     secret:'NFAUOFPI02MC0',
     resave: false,
     saveUninitialized: true,
-    cookie:{
-      secure:false,
-      maxAge: 30 * 60 * 100,
-    },  
+    // cookie:{
+    //   secure:false,
+    //   maxAge: 30 * 60 * 100,
+    // },  
 }));
 
 db.connect((err) => {
