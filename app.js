@@ -25,7 +25,7 @@ db.connect((err) => {
     } else{
         server.listen(3000)
     }
-});
+}); 
 
 
 app.disable('x-powered-by');

@@ -1,5 +1,6 @@
 body {
-  background-color: rgb(7, 10, 14);
+  background-color: rgb(10, 15, 20);
+  margin: 0;
 }
 
 .containerRegister {
@@ -7,7 +8,7 @@ body {
   align-items: center;
   justify-content: center;
   color: rgb(255, 255, 255);
-  font-family: "Times New Roman", Times, serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   height: 80px;
   justify-content: space-between;
   margin: 0px 30px 0px 30px;
@@ -46,7 +47,7 @@ body {
 .containerBodyRegister .containerRegister {
   color: rgb(255, 255, 255);
   font-size: 25px;
-  background-color: rgb(26, 32, 39);
+  background-color: rgb(27, 28, 28);
   border-radius: 10px;
   width: 420px;
   height: 400px;
@@ -63,7 +64,7 @@ body {
   margin: 20px 0px 20px 0px;
 }
 .containerBodyRegister .inputRegister {
-  background-color: rgb(7, 10, 14);
+  background-color: rgb(10, 15, 20);
   font-size: 17px;
   border: 0px;
   color: white;
@@ -103,7 +104,7 @@ body {
   align-items: center;
   justify-content: center;
   color: rgb(255, 255, 255);
-  font-family: "Times New Roman", Times, serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   height: 80px;
   justify-content: space-between;
   margin: 0px 30px 0px 30px;
@@ -142,7 +143,7 @@ body {
 .containerBodyLogin .containerLogin {
   color: rgb(255, 255, 255);
   font-size: 25px;
-  background-color: rgb(26, 32, 39);
+  background-color: rgb(27, 28, 28);
   border-radius: 10px;
   width: 420px;
   height: 400px;
@@ -159,7 +160,7 @@ body {
   margin: 20px 0px 20px 0px;
 }
 .containerBodyLogin .inputLogin {
-  background-color: rgb(7, 10, 14);
+  background-color: rgb(10, 15, 20);
   font-size: 17px;
   border: 0px;
   color: white;
@@ -200,7 +201,7 @@ body {
   justify-content: center;
   height: 97vh;
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 .containerError .mensajeError {
   text-align: center;
@@ -252,6 +253,150 @@ body {
 .containerError .errText {
   margin: 0px 0px 10px 0px;
   font-size: 25px;
+}
+
+.title {
+  color: white;
+  text-align: center;
+  font-size: 55px;
+  font-weight: bold;
+}
+.title .titleGraph {
+  margin: 30px 0px 0px 0px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.containerBodyRoom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+.containerBodyRoom .containerRoom {
+  border: solid rgb(45, 41, 41) 1px;
+  border-radius: 10px;
+  background-color: rgb(27, 28, 28);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.containerBodyRoom .archivoJson {
+  text-align: center;
+}
+.containerBodyRoom .textJson {
+  font-size: 25px;
+  margin: 0px 0px 0px 0px;
+  color: white;
+}
+.containerBodyRoom .Json {
+  color: white;
+}
+.containerBodyRoom .buttonJson {
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: rgb(35, 134, 54);
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border: 0px;
+  width: 100px;
+  height: 35px;
+  margin: 10px 1px 0px 0px;
+}
+.containerBodyRoom .buttonJson:hover {
+  transform: scale(1.01);
+  transition: 0.2s;
+}
+.containerBodyRoom .buttonJson:not(:hover) {
+  transform: scale(1);
+  transition: 0.4s;
+}
+.containerBodyRoom .imgJson {
+  height: 180px;
+}
+.containerBodyRoom .escribirNodo {
+  text-align: center;
+  justify-content: center;
+  margin: 0px 10px 0px 40px;
+}
+.containerBodyRoom .escribirNodo .titleNodo {
+  color: white;
+  font-size: 25px;
+  margin: 0px 0px 0px 0px;
+}
+.containerBodyRoom .escribirNodo .inputNodo {
+  background-color: rgb(10, 15, 20);
+  font-size: 17px;
+  border: 0px;
+  color: white;
+  border-radius: 5px;
+  font-family: "Times New Roman", Times, serif;
+  background-color: white;
+  color: black;
+  width: 200px;
+  height: 25px;
+  margin: 10px 0px 0px 0px;
+}
+.containerBodyRoom .escribirNodo .buttonNodo {
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: rgb(35, 134, 54);
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border: 0px;
+  width: 100px;
+  height: 35px;
+  margin: 10px 1px 0px 0px;
+}
+.containerBodyRoom .escribirNodo .buttonNodo:hover {
+  transform: scale(1.01);
+  transition: 0.2s;
+}
+.containerBodyRoom .escribirNodo .buttonNodo:not(:hover) {
+  transform: scale(1);
+  transition: 0.4s;
+}
+.containerBodyRoom .escribirConexion {
+  text-align: center;
+  justify-content: center;
+}
+.containerBodyRoom .escribirConexion .titleConexion {
+  color: white;
+  font-size: 25px;
+  margin: 0px 0px 0px 0px;
+}
+.containerBodyRoom .escribirConexion .inputConexion {
+  background-color: rgb(10, 15, 20);
+  font-size: 17px;
+  border: 0px;
+  color: white;
+  border-radius: 5px;
+  font-family: "Times New Roman", Times, serif;
+  background-color: white;
+  color: black;
+  width: 200px;
+  height: 25px;
+  margin: 10px 0px 0px 0px;
+}
+.containerBodyRoom .escribirConexion .buttonConexion {
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: rgb(35, 134, 54);
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border: 0px;
+  width: 100px;
+  height: 35px;
+  margin: 10px 1px 0px 0px;
+}
+.containerBodyRoom .escribirConexion .buttonConexion:hover {
+  transform: scale(1.01);
+  transition: 0.2s;
+}
+.containerBodyRoom .escribirConexion .buttonConexion:not(:hover) {
+  transform: scale(1);
+  transition: 0.4s;
 }
 
 /*# sourceMappingURL=style.css.map */
