@@ -14,10 +14,11 @@
           <p class="titleNodo">Nodos</p>
           <div class="flexNodo">
             <% data.forEach(function(obj) { %>
-              <p class="nombreNodo">Nodo: <%= obj.nombre %></p> 
               <div class="posicionesNodo">
+                <p class="nombreNodo">Nodo: <%= obj.nombre %></p> 
                 <p>Posición X: <%= obj.posX %></p> 
                 <p>Posición Y: <%= obj.posY %></p>
+                <hr>
               </div>
               <% }); %>      
           </div>
@@ -37,8 +38,11 @@
         
       </div>
     </div>
-    <form action="/dj" method="post">
-      <button>Mira ruta mas rapida</button>
-    </form>
+    <div class="cajaBoton">
+      <form action="/dj" method="post">
+        <button class="buttonRuta">Mira ruta mas rapida</button>
+      </form>
+
+    </div>
 </body>
 </html>
