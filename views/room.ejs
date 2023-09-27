@@ -43,6 +43,11 @@
                 </div>
             </div>
             <div class="containerSiguiente">
+                <div class="errorsystem">
+                    <% if (error) { %>
+                        <p class="err"><%= error %></p>
+                      <% } %>
+                </div>
                 <form action="/carte" method="post">
                     <p class="textDatos">ya cargaste tus datos? dale click al boton para seguir</p>
                     <button class="buttonSiguiente">sigue</button>

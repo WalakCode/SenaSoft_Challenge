@@ -9,7 +9,9 @@ const { createServer } = require('node:http');
 const server = createServer(app);
 const session = require('express-session'); 
 const cartController = require('./controllers/cartController')
-
+app.get('/hola', (req, res)=>{
+  res.render('carte')
+})
 app.use(session({
     secret:'NFAUOFPI02MC0',
     resave: false,

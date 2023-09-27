@@ -93,7 +93,9 @@ body{
         transition: 0.4s;
     }
 }
-
+.err{
+    margin: 0px 0px 5px 0px;
+}
 .containerlogin{
     display: flex;
     align-items: center;
@@ -254,6 +256,14 @@ body{
 .containerSiguiente{
     text-align: center;
     justify-content: center;
+    .errorsystem{
+        margin-left: auto;
+        margin-right: auto;
+        width: 265px;
+        text-align: center;
+        color: white;
+        font-size: 25px;
+    }
     .textDatos{
         color: white;
         font-size: 25px; 
@@ -289,7 +299,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70vh;
+    height: 65vh;
     .containerRoom{
         border: solid rgb(45, 41, 41) 1px;
         border-radius: 10px;
@@ -399,5 +409,5 @@ body{
             transition: 0.4s;
         }
     }
-
+    
 }
