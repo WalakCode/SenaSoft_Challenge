@@ -11,12 +11,12 @@ las carpetas se encuentran dividas entre carpetas de codigo y carpeta de ayuda
 - `json`: es un carpeta donde estaran json pre hechos para que subas a la base de datos y para que veas la estructura que debes tener si deseas hacer uno por tu cuenta
 - `pdf`: estan los pdf del reto siigo y tambien la documentacion general del proyecto(si usas visual studio code descarga la extencion que te permite ver el archivo desde ahi)
 - `sql `: esta la base de datos para que la importes 
--`package.json`y`package-lock.json`: archivos de node por si quieres ver o editar algo de la forma en que se ejecuta el proyecto o ver mas en detalle los modulos y las versiones que se usaron
+- `package.json`y`package-lock.json`: archivos de node por si quieres ver o editar algo de la forma en que se ejecuta el proyecto o ver mas en detalle los modulos y las versiones que se usaron
 - `README.md`: es este archivo de informacion general para la instalacion y uso de la app
 
 # instalacion
 
-**se necesita tener instaldo:**
+**se necesita tener instalado:**
 
 - node.js
 - base de datos mysql 
