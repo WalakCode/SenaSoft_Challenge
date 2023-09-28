@@ -78,7 +78,7 @@ app.post('/', (req, res) => {
                  res.render('error');
                } else {
                    req.session.user = email;
-                   res.render('room')
+                   res.redirect('/room')
                }
              });
             }
