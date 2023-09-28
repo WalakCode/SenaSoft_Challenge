@@ -49,6 +49,7 @@ app.get("/", (req, res) => {
 app.post("/", (req, res) => {
   const email = req.body.email;
   const password = req.body.pass;
+ 
 
   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
@@ -89,6 +90,7 @@ app.get("/room", (req, res) => {
   if (req.session.user) {
     let user = req.session.user;
     let error = req.session.dato2;
+
     res.render("room", { user, error });
   } else {
     res.redirect("login");
@@ -97,6 +99,7 @@ app.get("/room", (req, res) => {
   app.post("/login", (req, res) => {
     const email = req.body.email;
     const password = req.body.pass;
+    const ses = []
     req.session.user = email;
 
     userController.sessionStart(email, password, (err, auth, error) => {
