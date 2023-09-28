@@ -496,3 +496,43 @@ body{
 
 }
 
+// dj
+.containerBodyDj{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    hr{
+        width: 75%;
+    }
+
+    .containerCenterDj{
+        background-color: moduls.$backgroundForm;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 350px;
+        text-align: center ;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 20px;
+        color: white;
+
+        .titleInicial{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .rutaDj{
+            margin: 10px;
+        }
+        .noRutas{
+            margin: 0px;
+        }
+        .ciudad{
+            font-size: 23px;
+            font-weight: bold;
+            margin: 10px;
+            
+        }
+    }
+    
+
+}

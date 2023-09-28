@@ -526,4 +526,39 @@ body {
   background-color: white;
 }
 
+.containerBodyDj {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerBodyDj hr {
+  width: 75%;
+}
+.containerBodyDj .containerCenterDj {
+  background-color: rgb(27, 28, 28);
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 350px;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+  color: white;
+}
+.containerBodyDj .containerCenterDj .titleInicial {
+  font-size: 25px;
+  font-weight: bold;
+}
+.containerBodyDj .containerCenterDj .rutaDj {
+  margin: 10px;
+}
+.containerBodyDj .containerCenterDj .noRutas {
+  margin: 0px;
+}
+.containerBodyDj .containerCenterDj .ciudad {
+  font-size: 23px;
+  font-weight: bold;
+  margin: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
