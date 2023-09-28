@@ -26,8 +26,8 @@ las carpetas se encuentran dividas entre carpetas de codigo y carpeta de ayuda
 **pasos**
 - se coloca el comando `npm install` dentro de la carpeta del proyecto para instalar todos los modulos necesarios para iniciar
 - se exporta la base de datos ubicada en `/sql/mapa.sql` (si usas `xampp` se crea una base de datos llamda mapa y exportas las tablas)
--inicias la base de datos
--se usa el comando `npm start` para iniciar la aplicacion y accedes desde el navegador en [Aplicacion](http://localhost:3000/)
+- inicias la base de datos
+- se usa el comando `npm start` para iniciar la aplicacion y accedes desde el navegador en [Aplicacion](http://localhost:3000/)
 
 
 **uso**
