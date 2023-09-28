@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    
-<h1>NODO INICIAL: <%= cacheU %></h1>
+<div class="containerBodyDj">
+  <div class="containerCenterDj">
+    <div class="containerDj">
+      <p class="titleInicial">NODO INICIAL: <%= cacheU %></p>
 
-<% arrOb.forEach(function(obj) { %>
-    <%= cacheU %> -> <%= obj.ciudad %>
-       <P>   RUTA:</P><% if (obj.ruta === null) { %>
-        <P>no hay ruta entre los dos</P>
-      <% } else { %>
-        <%= obj.ruta %>
-      <% } %>
-    <P>DISTANCIA:</P><%= obj.distancia %> <br>
-    <p>----------------------------------------</p>
-<% }); %>
+      <% arrOb.forEach(function(obj) { %>
+          <p class="ciudad"><%= cacheU %> -> <%= obj.ciudad %></p>
+            <P class="rutaDj"> RUTA:</P><% if (obj.ruta === null) { %>
+              <P class="noRutas">No hay ruta entre los dos</P>
+            <% } else { %>
+              <%= obj.ruta %>
+            <% } %>
+          <hr>
+      <% }); %>
+
+    </div>              
+  </div>
+</div>
+</body>
+</html>
