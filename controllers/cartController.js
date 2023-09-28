@@ -116,6 +116,7 @@ const cartController = {
 
     const nodoInicio = cache.cacheStartPoint(); // Cambia esto al nodo deseado como punto de inicio
     const resultado = grafo.encontrarRutaMasCortaDesde(nodoInicio);
+    console.log(`----------------------------------------------------`)
     console.log(`Rutas más cortas desde ${nodoInicio}:`);
     for (const nodo in resultado.distancias) {
       if (resultado.distancias.hasOwnProperty(nodo)) {

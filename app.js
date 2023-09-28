@@ -108,6 +108,7 @@ app.get('/login',(req,res)=>{
   app.post('/login',(req,res)=>{
     const email = req.body.email; 
     const password = req.body.pass;
+    req.session.user = email;
     
     userController.sessionStart(email,password,(err,auth,error)=>{
     if (err) {
