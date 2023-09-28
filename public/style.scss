@@ -84,7 +84,7 @@ body{
         text-align: center;
     }
     .buttonRegister:hover{
-        transform: scale(1.1);
+        transform: scale(1.05);
         transition: 0.2s;
     }
     .buttonRegister:not(:hover){
@@ -173,7 +173,7 @@ body{
         text-align: center;
     }
     .buttonLogin:hover{
-        transform: scale(1.1);
+        transform: scale(1.05);
         transition: 0.2s;
     }
     .buttonLogin:not(:hover){
@@ -237,7 +237,7 @@ body{
         font-size: 15px;
     }
     .buttonErr:hover{
-        transform: scale(1.1);
+        transform: scale(1.05);
         transition: 0.2s;
     }
     .buttonErr:not(:hover){
@@ -276,7 +276,7 @@ body{
         margin: 10px 1px 0px 0px;
     }
     .buttonSiguiente:hover{
-        transform: scale(1.1);
+        transform: scale(1.05);
         transition: 0.2s;
     }
     .buttonSiguiente:not(:hover){
@@ -330,7 +330,7 @@ body{
         margin: 10px 1px 0px 0px;
     }
     .buttonJson:hover{
-        transform: scale(1.1);
+        transform: scale(1.05);
         transition: 0.2s;
     }
     .buttonJson:not(:hover){
@@ -366,7 +366,7 @@ body{
             margin: 10px 1px 0px 0px;
         }
         .buttonNodo:hover{
-            transform: scale(1.1);
+            transform: scale(1.05);
             transition: 0.2s;
         }
         .buttonNodo:not(:hover){
@@ -400,7 +400,7 @@ body{
             margin: 10px 1px 0px 0px;
         }
         .buttonConexion:hover{
-            transform: scale(1.1);
+            transform: scale(1.05);
             transition: 0.2s;
         }
         .buttonConexion:not(:hover){
@@ -468,20 +468,30 @@ body{
 }
 .cajaBoton{
     text-align: center;
+    margin-bottom: 20px;
+    gap: 5%;
+    margin-top: 10px;
     .buttonRuta{
         @include moduls.boton();
         border: 0px;
-        width: 267px;
-        height: 35px;
-        margin-bottom: 10px;
+        width: 250px;
+        height: 30px;
+        
     }
     .buttonRuta:hover{
-        transform: scale(1.1);
+        transform: scale(1.05);
         transition: 0.2s;
     }
     .buttonRuta:not(:hover){
         transform: scale(1);
         transition: 0.4s;
+    }
+    .inputInicio{
+        @include moduls.inputs();
+        color: black;
+        width: 260px;
+        height: 25px;
+        background-color: white;
     }
 
 }

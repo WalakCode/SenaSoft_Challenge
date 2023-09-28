@@ -91,7 +91,7 @@ body {
   text-align: center;
 }
 .containerBodyRegister .buttonRegister:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 0.2s;
 }
 .containerBodyRegister .buttonRegister:not(:hover) {
@@ -187,7 +187,7 @@ body {
   text-align: center;
 }
 .containerBodyLogin .buttonLogin:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 0.2s;
 }
 .containerBodyLogin .buttonLogin:not(:hover) {
@@ -249,7 +249,7 @@ body {
   font-size: 15px;
 }
 .containerError .buttonErr:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 0.2s;
 }
 .containerError .buttonErr:not(:hover) {
@@ -290,7 +290,7 @@ body {
   margin: 10px 1px 0px 0px;
 }
 .containerSiguiente .buttonSiguiente:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 0.2s;
 }
 .containerSiguiente .buttonSiguiente:not(:hover) {
@@ -348,7 +348,7 @@ body {
   margin: 10px 1px 0px 0px;
 }
 .containerBodyRoom .buttonJson:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 0.2s;
 }
 .containerBodyRoom .buttonJson:not(:hover) {
@@ -393,7 +393,7 @@ body {
   margin: 10px 1px 0px 0px;
 }
 .containerBodyRoom .escribirNodo .buttonNodo:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 0.2s;
 }
 .containerBodyRoom .escribirNodo .buttonNodo:not(:hover) {
@@ -434,7 +434,7 @@ body {
   margin: 10px 1px 0px 0px;
 }
 .containerBodyRoom .escribirConexion .buttonConexion:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 0.2s;
 }
 .containerBodyRoom .escribirConexion .buttonConexion:not(:hover) {
@@ -491,6 +491,9 @@ body {
 
 .cajaBoton {
   text-align: center;
+  margin-bottom: 20px;
+  gap: 5%;
+  margin-top: 10px;
 }
 .cajaBoton .buttonRuta {
   font-weight: bold;
@@ -499,17 +502,28 @@ body {
   color: white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   border: 0px;
-  width: 267px;
-  height: 35px;
-  margin-bottom: 10px;
+  width: 250px;
+  height: 30px;
 }
 .cajaBoton .buttonRuta:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 0.2s;
 }
 .cajaBoton .buttonRuta:not(:hover) {
   transform: scale(1);
   transition: 0.4s;
+}
+.cajaBoton .inputInicio {
+  background-color: rgb(10, 15, 20);
+  font-size: 17px;
+  border: 0px;
+  color: white;
+  border-radius: 5px;
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  width: 260px;
+  height: 25px;
+  background-color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
