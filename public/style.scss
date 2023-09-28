@@ -84,7 +84,7 @@ body{
         text-align: center;
     }
     .buttonRegister:hover{
-        transform: scale(1.01);
+        transform: scale(1.1);
         transition: 0.2s;
     }
     .buttonRegister:not(:hover){
@@ -173,7 +173,7 @@ body{
         text-align: center;
     }
     .buttonLogin:hover{
-        transform: scale(1.01);
+        transform: scale(1.1);
         transition: 0.2s;
     }
     .buttonLogin:not(:hover){
@@ -199,6 +199,7 @@ body{
         text-align: center;
         border-radius: 10px;
         border: solid rgb(45, 41, 41) 2px;
+        background-color: moduls.$backgroundForm;
         
     }
    
@@ -236,7 +237,7 @@ body{
         font-size: 15px;
     }
     .buttonErr:hover{
-        transform: scale(1.01);
+        transform: scale(1.1);
         transition: 0.2s;
     }
     .buttonErr:not(:hover){
@@ -275,7 +276,7 @@ body{
         margin: 10px 1px 0px 0px;
     }
     .buttonSiguiente:hover{
-        transform: scale(1.01);
+        transform: scale(1.1);
         transition: 0.2s;
     }
     .buttonSiguiente:not(:hover){
@@ -329,7 +330,7 @@ body{
         margin: 10px 1px 0px 0px;
     }
     .buttonJson:hover{
-        transform: scale(1.01);
+        transform: scale(1.1);
         transition: 0.2s;
     }
     .buttonJson:not(:hover){
@@ -365,7 +366,7 @@ body{
             margin: 10px 1px 0px 0px;
         }
         .buttonNodo:hover{
-            transform: scale(1.01);
+            transform: scale(1.1);
             transition: 0.2s;
         }
         .buttonNodo:not(:hover){
@@ -399,7 +400,7 @@ body{
             margin: 10px 1px 0px 0px;
         }
         .buttonConexion:hover{
-            transform: scale(1.01);
+            transform: scale(1.1);
             transition: 0.2s;
         }
         .buttonConexion:not(:hover){
@@ -412,28 +413,25 @@ body{
 
 //carte
 .containerBodycarte{
-    hr{
-        width: 70%;
-    }
     display: flex;
     justify-content: center;
     text-align: center;
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     
+    hr{
+        width: 70%;
+    }
     .containerNodosConexion{
         display: flex;
     }
+    
 
     .containerNodos{
         border-radius: 10px;
         background-color: moduls.$backgroundForm;
         width: 300px;
         margin: 10px;
-        .flexNodo{
-            display: flex;
-            flex-wrap: wrap;
-        }
         .posicionesNodo{
             p{
                 margin: 15;
@@ -443,13 +441,10 @@ body{
         .titleNodo{
             font-size: 33px;
             font-weight: bold;
+            margin-bottom: 44.5px;
         }
         .nombreNodo{
-            color: rgb(223, 211, 211);
-            font-size: 28px;
             font-weight: bold;
-            margin-right: 20px;
-            margin-left: 30px;
         }
     }
 
@@ -470,7 +465,24 @@ body{
             }
         }
     }
+}
+.cajaBoton{
+    text-align: center;
+    .buttonRuta{
+        @include moduls.boton();
+        border: 0px;
+        width: 267px;
+        height: 35px;
+        margin-bottom: 10px;
+    }
+    .buttonRuta:hover{
+        transform: scale(1.1);
+        transition: 0.2s;
+    }
+    .buttonRuta:not(:hover){
+        transform: scale(1);
+        transition: 0.4s;
+    }
 
 }
-
 

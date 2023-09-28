@@ -91,7 +91,7 @@ body {
   text-align: center;
 }
 .containerBodyRegister .buttonRegister:hover {
-  transform: scale(1.01);
+  transform: scale(1.1);
   transition: 0.2s;
 }
 .containerBodyRegister .buttonRegister:not(:hover) {
@@ -187,7 +187,7 @@ body {
   text-align: center;
 }
 .containerBodyLogin .buttonLogin:hover {
-  transform: scale(1.01);
+  transform: scale(1.1);
   transition: 0.2s;
 }
 .containerBodyLogin .buttonLogin:not(:hover) {
@@ -212,6 +212,7 @@ body {
   text-align: center;
   border-radius: 10px;
   border: solid rgb(45, 41, 41) 2px;
+  background-color: rgb(27, 28, 28);
 }
 .containerError .containerImgErr {
   margin-left: 1.3cm;
@@ -248,7 +249,7 @@ body {
   font-size: 15px;
 }
 .containerError .buttonErr:hover {
-  transform: scale(1.01);
+  transform: scale(1.1);
   transition: 0.2s;
 }
 .containerError .buttonErr:not(:hover) {
@@ -289,7 +290,7 @@ body {
   margin: 10px 1px 0px 0px;
 }
 .containerSiguiente .buttonSiguiente:hover {
-  transform: scale(1.01);
+  transform: scale(1.1);
   transition: 0.2s;
 }
 .containerSiguiente .buttonSiguiente:not(:hover) {
@@ -347,7 +348,7 @@ body {
   margin: 10px 1px 0px 0px;
 }
 .containerBodyRoom .buttonJson:hover {
-  transform: scale(1.01);
+  transform: scale(1.1);
   transition: 0.2s;
 }
 .containerBodyRoom .buttonJson:not(:hover) {
@@ -392,7 +393,7 @@ body {
   margin: 10px 1px 0px 0px;
 }
 .containerBodyRoom .escribirNodo .buttonNodo:hover {
-  transform: scale(1.01);
+  transform: scale(1.1);
   transition: 0.2s;
 }
 .containerBodyRoom .escribirNodo .buttonNodo:not(:hover) {
@@ -433,7 +434,7 @@ body {
   margin: 10px 1px 0px 0px;
 }
 .containerBodyRoom .escribirConexion .buttonConexion:hover {
-  transform: scale(1.01);
+  transform: scale(1.1);
   transition: 0.2s;
 }
 .containerBodyRoom .escribirConexion .buttonConexion:not(:hover) {
@@ -460,10 +461,6 @@ body {
   width: 300px;
   margin: 10px;
 }
-.containerBodycarte .containerNodos .flexNodo {
-  display: flex;
-  flex-wrap: wrap;
-}
 .containerBodycarte .containerNodos .posicionesNodo p {
   margin: 15;
   font-size: 18px;
@@ -471,13 +468,10 @@ body {
 .containerBodycarte .containerNodos .titleNodo {
   font-size: 33px;
   font-weight: bold;
+  margin-bottom: 44.5px;
 }
 .containerBodycarte .containerNodos .nombreNodo {
-  color: rgb(223, 211, 211);
-  font-size: 28px;
   font-weight: bold;
-  margin-right: 20px;
-  margin-left: 30px;
 }
 .containerBodycarte .containerConexion {
   background-color: rgb(27, 28, 28);
@@ -493,6 +487,29 @@ body {
 .containerBodycarte .containerConexion .ubicacionPeso p {
   margin: 15px 15px 15px 15px;
   font-size: 18px;
+}
+
+.cajaBoton {
+  text-align: center;
+}
+.cajaBoton .buttonRuta {
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: rgb(35, 134, 54);
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border: 0px;
+  width: 267px;
+  height: 35px;
+  margin-bottom: 10px;
+}
+.cajaBoton .buttonRuta:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+.cajaBoton .buttonRuta:not(:hover) {
+  transform: scale(1);
+  transition: 0.4s;
 }
 
 /*# sourceMappingURL=style.css.map */
