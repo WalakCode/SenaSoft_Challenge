@@ -24,6 +24,7 @@ las carpetas se encuentran dividas entre carpetas de codigo y carpeta de ayuda
 # Ejecucion
 
 **pasos**
+- se hace el `git clone https://github.com/WalakCode/SenaSoft_Challenge` en donde gustes para crear la carpeta
 - se coloca el comando `npm install` dentro de la carpeta del proyecto para instalar todos los modulos necesarios para iniciar
 - se exporta la base de datos ubicada en `/sql/mapa.sql` (si usas `xampp` se crea una base de datos llamda mapa y exportas las tablas)
 - inicias la base de datos
