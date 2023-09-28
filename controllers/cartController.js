@@ -41,7 +41,7 @@ const cartController = {
     });
   },
 
-  graph: (nodos, aristas) => {
+  graph: (nodos, aristas,callback) => {
     
     class graph {
       constructor() {
@@ -112,24 +112,29 @@ const cartController = {
         grafo.agregarArista(i.ubicacion1,i.ubicacion2,i.peso)
     });
     
-    grafo.imprimirGrafo()
+    // grafo.imprimirGrafo()
 
     const nodoInicio = cache.cacheStartPoint(); // Cambia esto al nodo deseado como punto de inicio
     const resultado = grafo.encontrarRutaMasCortaDesde(nodoInicio);
-    console.log(`----------------------------------------------------`)
-    console.log(`Rutas más cortas desde ${nodoInicio}:`);
+    
+    const allObj = {};
     for (const nodo in resultado.distancias) {
       if (resultado.distancias.hasOwnProperty(nodo)) {
-        if(resultado.distancias[nodo] == Infinity){
-            console.log(`${nodo} -> Distancia: inalcanzable`);
+        if (resultado.distancias[nodo] == Infinity) {
+          allObj[nodo] = {
+            distancia: 'inalcanzable',
+            ruta: null,
+          };
+        } else {
+          allObj[nodo] = {
+            distancia: resultado.distancias[nodo],
+            ruta: obtenerRuta(resultado.anterior, nodo),
+          };
         }
-        else{
-            console.log(`${nodo} -> Distancia: ${resultado.distancias[nodo]}, Ruta: ${obtenerRuta(resultado.anterior, nodo)}`);
-        }
-        
       }
     }
-    
+
+    callback(allObj);
   },
 };
 

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>NODO INICIAL: <%= cacheU %></h1>
+
+<% arrOb.forEach(function(obj) { %>
+    <%= cacheU %> -> <%= obj.ciudad %>
+       <P>   RUTA:</P><% if (obj.ruta === null) { %>
+        <P>no hay ruta entre los dos</P>
+      <% } else { %>
+        <%= obj.ruta %>
+      <% } %>
+    <P>DISTANCIA:</P><%= obj.distancia %> <br>
+    <p>----------------------------------------</p>
+<% }); %>
